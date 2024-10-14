@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-menu-item-selected{
+    background-color: #BC8E5B !important;
+}
+
+.ant-btn-color-primary{
+    background-color: #BC8E5B !important;
+}
+
+.ant-spin-dot-holder {
+    color: #BC8E5B !important;
+}
+
