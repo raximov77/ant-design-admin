@@ -1,20 +1,17 @@
+import { useContext } from 'react'
 import './App.css'
-import Header from './components/Header'
-import Navbar from './components/Navbar'
-import CustomRoutes from './routes'
+import { Context } from './context/AuthContext'
+import LoginRoutes from "./routes/LoginRoutes"
+import DashboardRoutes from './routes/DashboardRoutes'
 
 function App() {
-  return (
-    <>
-    <Header/>
-    <div className='flex justify-between'>
-        <Navbar/>
-      <div className='w-[80%] h-[100vh] overflow-y-auto'>
-        <CustomRoutes/>
-      </div>
-    </div>
-    </>
-  )
+  const {token} = useContext(Context)
+    if(token){
+      return <DashboardRoutes/>
+    }
+    else{
+      return <LoginRoutes/>
+    }
 }
 
 export default App
