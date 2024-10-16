@@ -6,6 +6,7 @@ import Loading from "../assets/images/loading.png"
 import toast, { Toaster } from 'react-hot-toast';
 import { Context } from '../context/AuthContext';
 import SiteLogo from "../assets/images/favicon.ico"
+import { UnlockOutlined, UserOutlined } from '@ant-design/icons';
 
 function Register() {
   const navigate = useNavigate()
@@ -19,7 +20,7 @@ function Register() {
       password: e.target.password.value.trim(),
     };
       setIsLoading(true);
-      toast.success('Successfully registered ' + data.login)
+      toast.success("Muvaffaqiyatli ro'yxatdan o'tdingiz" + data.login)
       setTimeout(() => {
         setRegister(data)
         navigate(-1)
@@ -35,13 +36,13 @@ function Register() {
       <div className='w-[620px] mx-auto bg-white'>
         <form onSubmit={handleRegisterSubmit} className="w-[348px] mx-auto pb-[100px]" autoComplete="off">
           <Toaster position="top-right" reverseOrder={false}/>
-          <LoginInput placeholder="Kirish" name="login" type="text" extrStyle="mb-[14px]" />
-          <LoginInput placeholder="Maxfiy so'z" name="password" type="tel" extrStyle="mb-[14px]" />
-          <div className="text-left">
-            <Link to={"/"} className='text-[18px] text-[#2D88D4] font-semibold leading-[24px]'>Sign In</Link>
+          <LoginInput placeholder="Kirish" name="login" type="text" extrStyle="mb-[14px]" prefixIcon={UserOutlined} size='large'/>
+          <LoginInput placeholder="Maxfiy so'z" name="password" type="password" extrStyle="mb-[34px]" prefixIcon={UnlockOutlined} size='large'/>
+          <div className="text-left mb-[14px]">
+            <Link to={"/"} className='text-[18px] text-[#2D88D4] font-semibold leading-[24px]'>Kirish</Link>
           </div>
-          <Button extraStyle={"h-[42px] mt-[15px] w-full p-[10px] font-bold text-[18px] leading-[23px] hover:opacity-75 duration-300 text-white bg-[#BC8E5B] rounded-[76px]"} type="submit">
-            {isLoading ? <img className='scale-[3] mx-auto' src={Loading} alt="Loading..." width={22} h /> : 'Sign up'}
+          <Button isLoading={isLoading} loadingSrc={Loading}  type="submit" className="custom-button" extraStyle={"mt-[15px]"}>
+            {isLoading ? <img className='scale-[3] mx-auto' src={Loading} alt="Loading..." width={22} h /> : "Ro'yxatdan o'tish"}
           </Button>
         </form>
       </div>

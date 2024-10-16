@@ -1,26 +1,21 @@
 import React from 'react';
-import { UserOutlined, UnlockOutlined } from '@ant-design/icons';
+import { Input } from 'antd';
 
-function LoginInput({ placeholder, type, name, extrStyle, prefix }) {
+const LoginInput = ({ placeholder, name, type, required = true, allowClear = true, size = 'large', prefixIcon: PrefixIcon }) => {
   return (
-    <div className={`relative ${extrStyle}`}>
-      {prefix && <span className="absolute left-3 top-2">{prefix}</span>}
-      <input
-        className={`py-[10px] outline-none rounded-[6px] w-full pl-10 text-[16px] leading-[19px] border-[1px] border-solid border-[#BC8E5B]`}
-        type={type}
-        required
-        placeholder={placeholder}
-        name={name}
-      />
-    </div>
+    <Input
+      className='mb-[25px] outline-none rounded-[6px] w-full pl-4 text-[16px] leading-[19px] border-[1px] border-solid border-[#BC8E5B]'
+      placeholder={placeholder}
+      prefix={<PrefixIcon style={{ color: 'rgba(0,0,0,.80)' }} />} 
+      name={name}
+      type={type}
+      required={required}
+      size={size}
+      allowClear={allowClear}
+    />
   );
-}
+};
 
 export default LoginInput;
 
-{/* <Input className='mb-[27px] outline-none rounded-[6px] w-full pl-4 text-[16px] leading-[19px] border-[1px] border-solid border-[#BC8E5B]' placeholder="Maxfiy so'z" 
-            prefix={<UnlockOutlined style={{ color: 'rgba(0,0,0,.80)' }} />}
-            name="password" type="password" required size='large' allowClear/>
-            <Button className='h-[35px] w-full p-[10px] font-bold text-[17px] leading-[20px] hover:opacity-75 duration-300 text-white bg-[#BC8E5B] rounded-[8px]' type="submit">
-              {isLoading ? <img className='scale-[2] mx-auto' src={Loading} alt="Loading..." width={22} h /> : 'Login'}
-            </Button> */}
+

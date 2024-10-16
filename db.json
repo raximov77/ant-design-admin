@@ -21,50 +21,6 @@
       "regionName": "Toshkent",
       "address": "Chilonzor 10kv",
       "createdAt": "05.11.2005"
-    },
-    {
-      "id": "f961",
-      "key": 87,
-      "companyName": "gh",
-      "inn": "56",
-      "status": "1",
-      "regionId": "1",
-      "regionName": "Toshkent viloyati",
-      "address": "56eyrgfg",
-      "createdAt": "2024-10-01"
-    },
-    {
-      "id": "08a6",
-      "key": 45,
-      "companyName": "scscssxxxxxxxxxxxxxxxxxxxxscac",
-      "inn": "2121212",
-      "status": "1",
-      "regionId": "2",
-      "regionName": "Farg'ona viloyati",
-      "address": "1212scaaaaaaaaaaaaaaaaaaaaaa",
-      "createdAt": "2024-10-17"
-    },
-    {
-      "id": "77cd",
-      "key": 49,
-      "companyName": "Everest",
-      "inn": "123456789",
-      "status": "3",
-      "regionId": "1",
-      "regionName": "Toshkent viloyati",
-      "address": "Toshkent vil",
-      "createdAt": "2024-10-18"
-    },
-    {
-      "id": "960d",
-      "key": 90,
-      "companyName": "df3r",
-      "inn": "334343",
-      "status": "1",
-      "regionId": "1",
-      "regionName": "Toshkent viloyati",
-      "address": "22evff",
-      "createdAt": "2024-10-09"
     }
   ]
 }

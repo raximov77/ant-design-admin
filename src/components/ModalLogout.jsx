@@ -1,13 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { Modal } from 'antd';
 
-function ModalLogout({children, setOpenModal, OpenModal}) {
+const ModalLogout = ({ isVisible, onConfirm, onCancel }) => {
   return (
-    <div id='wrappper' onClick={(e) => e.target.id == "wrapper" ? setOpenModal(false) : ""} className={`fixed z-50 duration-300 inset-0 flex justify-center ${OpenModal ? "scale-100" : "scale-0"} bg-[#0000002s9] items-center backdrop-blur`}>
-        <div className='bg-white w-[300px] p-5 rounded-lg'>
-        {children}
-        </div>
-    </div>
-  )
-}
+    <>
+      {isVisible && (
+        <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40"></div>
+      )}
+      <Modal
+        width={"600px"}
+        title={<h2 className="text-[21px] font-semibold">Platformadan chiqishni xohlaysizmi?</h2>}
+        open={isVisible}
+        onOk={onConfirm}
+        onCancel={onCancel}
+        okText="Ha"
+        cancelText="Yo'q"
+        centered
+        className="z-50" 
+      >
+        <div className="h-[22px] flex justify-center items-center"></div>
+      </Modal>
+    </>
+  );
+};
 
-export default ModalLogout
+export default ModalLogout;

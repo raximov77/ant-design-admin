@@ -6,6 +6,7 @@ import { Context } from '../context/AuthContext';
 import Loading from "../assets/images/loading.png"
 import toast, { Toaster } from 'react-hot-toast';
 import SiteLogo from "../assets/images/favicon.ico"
+import { UnlockOutlined, UserOutlined } from '@ant-design/icons';
 
 function Login() {
   const { setToken, register } = useContext(Context);
@@ -20,23 +21,23 @@ function Login() {
     if(register){
       if (data.login == register.login && data.password == register.password) {
         setIsLoading(true);
-        toast.success('Welcome to Udemy Inter. school ' + data.login)
+        toast.success('Welcome to Admin page ' + data.login)
         setTimeout(() => setToken(data),1000)
       } 
       else {
         setIsLoading(true);
-        setTimeout(() => toast.error("This didn't work."),1000)
+        setTimeout(() => toast.error("Noto'g'ri parol kiritdingiz"),1000)
       }
     }
     else{
       if (data.login == 'admin' && data.password == '123') {
         setIsLoading(true);
-        toast.success('Welcome to Admin Panel ' + data.login)
+        toast.success('Welcome to Admin page ' + data.login)
         setTimeout(() => setToken(data),1000)
       } 
       else {
         setIsLoading(true);
-        setTimeout(() => toast.error("This didn't work."),1000)
+        setTimeout(() => toast.error("Noto'g'ri parol kiritdingiz"),1000)
       }
     }
   }
@@ -50,13 +51,13 @@ function Login() {
         <div className='w-[620px] mx-auto bg-white'>
           <form onSubmit={handleLoginSubmit} className="w-[348px] mx-auto pb-[100px]" autoComplete="off">
             <Toaster position="top-right" reverseOrder={false}/>
-            <LoginInput placeholder="Kirish" name="login" type="text" extrStyle="mb-[14px]" />
-            <LoginInput placeholder="Maxfiy so'z" name="password" type="password" extrStyle="mb-[34px]" />
-            <Button extraStyle={"h-[42px] w-full"} type="submit">
-              {isLoading ? <img className='scale-[2] mx-auto' src={Loading} alt="Loading..." width={22} h /> : 'Login'}
-            </Button>
+            <LoginInput placeholder="Kirish" name="login" type="text" extrStyle="mb-[14px]" prefixIcon={UserOutlined} size='large'/>
+            <LoginInput placeholder="Maxfiy so'z" name="password" type="password" extrStyle="mb-[34px]" prefixIcon={UnlockOutlined} size='large'/>
+            <Button isLoading={isLoading} loadingSrc={Loading}  type="submit" className="custom-button" extraStyle={"mt-[15px]"}>
+            {isLoading ? <img className='scale-[3] mx-auto' src={Loading} alt="Loading..." width={22} h /> : 'Kirish'}
+          </Button>
             <div className="flex justify-center items-center mt-[14px]">
-              <Link to="/sign-up" className="text-[18px] text-[#2D88D4] font-semibold leading-[24px]">Sign up</Link>
+              <Link to="/sign-up" className="text-[18px] text-[#2D88D4] font-semibold leading-[24px]">Ro'yxatdan o'tish</Link>
             </div>
           </form>
           </div>
