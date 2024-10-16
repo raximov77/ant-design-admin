@@ -20,7 +20,7 @@ function Register() {
       password: e.target.password.value.trim(),
     };
       setIsLoading(true);
-      toast.success("Muvaffaqiyatli ro'yxatdan o'tdingiz" + data.login)
+      toast.success("Muvaffaqiyatli ro'yxatdan o'tdingiz " + data.login)
       setTimeout(() => {
         setRegister(data)
         navigate(-1)

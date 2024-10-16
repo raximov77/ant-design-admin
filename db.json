@@ -21,6 +21,17 @@
       "regionName": "Toshkent",
       "address": "Chilonzor 10kv",
       "createdAt": "05.11.2005"
+    },
+    {
+      "id": "ea09",
+      "key": 12,
+      "companyName": "Everest",
+      "inn": "223344556",
+      "status": "1",
+      "regionId": "1",
+      "regionName": "Toshkent viloyati",
+      "address": "Chilonzor, 3kv",
+      "createdAt": "2010-01-01"
     }
   ]
 }
