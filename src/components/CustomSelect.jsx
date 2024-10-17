@@ -1,7 +1,7 @@
 import React from 'react';
 import { Select } from 'antd';
 
-const CustomSelect = ({placeholder, width, options, setChooseId, setIsLoading, setLabelValue}) => {
+const CustomSelect = ({placeholder, width, options, chooseId, setChooseId, setIsLoading, setLabelValue}) => {
     const onChange = (value, obj) => {
        if(setIsLoading){
             setIsLoading(true)
@@ -11,12 +11,10 @@ const CustomSelect = ({placeholder, width, options, setChooseId, setIsLoading, s
             setLabelValue(obj.label)
             setChooseId(value)
        }
-       else{
-            setChooseId(value)
-       }
     };
     return (
         <Select
+          value={chooseId}
             style={{width:`${width}`}}
             showSearch
             allowClear

@@ -1,26 +1,15 @@
 {
   "organization": [
     {
-      "key": "1",
-      "id": "1",
-      "companyName": "Najot Ta'lim",
-      "inn": 223344556,
-      "status": "1",
+      "key": 24,
+      "companyName": "Cambridge academy1111",
+      "inn": "111111111",
+      "status": "2",
       "regionId": "2",
-      "regionName": "Farg'ona",
-      "address": "Chilonzor 9kv",
-      "createdAt": "05.11.2018"
-    },
-    {
-      "key": "11",
-      "id": "2",
-      "companyName": "Cambridge academy",
-      "inn": "",
-      "status": "3",
-      "regionId": "1",
-      "regionName": "Toshkent",
-      "address": "Chilonzor 10kv",
-      "createdAt": "05.11.2005"
+      "regionName": "Farg'ona viloyati",
+      "address": "Chilonzor 10kv11111111",
+      "createdAt": "2005-11-01",
+      "id": "2"
     },
     {
       "id": "ea09",
@@ -32,6 +21,62 @@
       "regionName": "Toshkent viloyati",
       "address": "Chilonzor, 3kv",
       "createdAt": "2010-01-01"
+    },
+    {
+      "id": "3db7",
+      "key": 43,
+      "companyName": "t1",
+      "inn": "111111111",
+      "status": "1",
+      "regionId": "1",
+      "regionName": "Toshkent viloyati",
+      "address": "11111111111111111111111",
+      "createdAt": null
+    },
+    {
+      "id": "4315",
+      "key": 81,
+      "companyName": "2222222222",
+      "inn": "222222222",
+      "status": "3",
+      "regionId": "2",
+      "regionName": "Farg'ona viloyati",
+      "address": "222222222222222222",
+      "createdAt": null
+    },
+    {
+      "id": "4430",
+      "key": 46,
+      "companyName": "3333333333333",
+      "inn": "333333333",
+      "status": "2",
+      "regionId": "2",
+      "regionName": "Farg'ona viloyati",
+      "address": "333333333333333",
+      "createdAt": null
+    },
+    {
+      "id": "d664",
+      "key": 65,
+      "companyName": "4444444444444444",
+      "inn": "444444444",
+      "status": "3",
+      "regionId": "3",
+      "regionName": "Samarqand viloyati",
+      "address": "4444444444444444444",
+      "createdAt": null
+    }
+  ],
+  "users": [
+    {
+      "key": "21",
+      "id": "1",
+      "name": "Ikrom",
+      "email": "raximovikrom42@gmail.com",
+      "number": "+998901384393",
+      "status": false,
+      "job": "Software",
+      "address": "Tashkent"
     }
   ]
 }

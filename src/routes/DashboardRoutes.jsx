@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from '../components/Header';  // Import your components
+import Header from '../components/Header';
 import Navbar from '../components/Navbar';
 import Organization from '../pages/Organization';
 import OrganizationAdd from '../pages/OrganizationAdd';
@@ -18,6 +18,7 @@ function DashboardPage() {
             <Route path='/' element={<Organization />} />
             <Route path='/add' element={<OrganizationAdd />} />
             <Route path='/:id' element={<OrganizationMore />} />
+            <Route path='/:id/edit' element={<OrganizationAdd />} />
             <Route path='/capital-users' element={<CapitalUsers />} />
             <Route path='/region-users' element={<RegionUsers />} />
           </Routes>

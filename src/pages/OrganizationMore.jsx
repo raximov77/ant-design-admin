@@ -21,10 +21,10 @@ function OrganizationMore() {
                 <button onClick={() => navigate(-1)} className='scale-[1.4]'><ArrowLeftOutlined/></button>
               <h2 className='font-bold text-[25px]'>{singleData.companyName ? singleData.companyName : <LineOutlined/>}</h2>
             </div>
-            <Button icon={<EditOutlined/>} size='large' type='primary'>Tahrirlash</Button>
+            <Button onClick={() => navigate("edit")} htmlType='button' icon={<EditOutlined/>} size='large' type='primary'>Tahrirlash</Button>
         </div>
-        <ul className='w-[50%] flex justify-between p-5 rounded-xl border-[2px] border-slate-600'>
-            <li className='space-y-5 w-[50%]'>
+        <div className='w-[50%] flex justify-between p-5 rounded-xl border-[2px] border-slate-600'>
+            <ul className='space-y-5 w-[50%]'>
                 <li className='flex flex-col'>
                     <span className='text-[15px] text-slate-500'>ID</span>
                     <strong className='text-[22px]'>{singleData.id}</strong>
@@ -41,11 +41,15 @@ function OrganizationMore() {
                     <span className='text-[15px] text-slate-500'>Hudud nomi</span>
                     <strong className='text-[22px]'>{singleData.regionName}</strong>
                 </li>
-            </li>
-            <li className='space-y-5 w-[50%]'>
+            </ul>
+            <ul className='space-y-5 w-[50%]'>
                 <li className='flex flex-col'>
                     <span className='text-[15px] text-slate-500'>Holati</span>
-                    <strong className='text-[22px]'>{singleData.status ? "Faol" : "Faol emas"}</strong>
+                    <strong className='text-[22px]'>
+                        {singleData.status == 1 ? "Faol" : ""}
+                        {singleData.status == 2 ? "Faol emas" : ""}
+                        {singleData.status == 3 ? "Jarayonda" : ""}
+                    </strong>
                 </li>
                 <li className='flex flex-col'>
                     <span className='text-[15px] text-slate-500'>Manzili</span>
@@ -55,8 +59,8 @@ function OrganizationMore() {
                     <span className='text-[15px] text-slate-500'>Yaratilgan vaqt</span>
                     <strong className='text-[22px]'>{singleData.createdAt}</strong>
                 </li>
-            </li>
-        </ul>
+            </ul>
+        </div>
     </div>
   )
 }
