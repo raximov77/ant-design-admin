@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const items = [
   {
     key: '1',
-    icon: <BankOutlined className='scale-[2]'/>,
-    label: <strong className='text-[20px] pl-2 pt-1'>Tashkilotlar</strong>,
+    icon: <BankOutlined className='scale-[1.7]'/>,
+    label: <strong className='text-[19px] pl-2 pt-1'>Tashkilotlar</strong>,
     children: [
       {
         key: '11',
@@ -17,8 +17,8 @@ const items = [
   },
   {
     key: '2',
-    icon: <UsergroupDeleteOutlined className='scale-[2]'/>,
-    label: <strong className='text-[20px] pl-2 pt-1'>Foydalanuvchilar</strong>,
+    icon: <UsergroupDeleteOutlined className='scale-[1.7]'/>,
+    label: <strong className='text-[19px] pl-2 pt-1'>Foydalanuvchilar</strong>,
     children: [
       {
         key: '21',

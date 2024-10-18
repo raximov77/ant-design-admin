@@ -157,7 +157,7 @@ function Organization() {
               <h2 className='font-bold text-[25px]'>Tashkilotlar</h2>
               <span className='text-[15px] pl-1 text-slate-400'>tashkilotlar ({data.length})</span>
             </div>
-            <Button onClick={() => navigate("add")} icon={<MedicineBoxOutlined/>} size='large' type='primary'>Qo'shish</Button>
+            <Button className='hover:opacity-75' onClick={() => navigate("add")} icon={<MedicineBoxOutlined/>} size='large' type='primary'>Qo'shish</Button>
         </div>
         <div className='flex mt-5 items-center space-x-5'>
             <Input onChange={handleSearchValue} className='w-[350px]' size='large' type='text' allowClear placeholder='Qidirish...'/>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { GithubOutlined} from '@ant-design/icons';
 import ModalLogout from './ModalLogout';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import SiteLogo from "../assets/images/favicon.ico"
 
 function Header() {
   const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
@@ -15,10 +15,12 @@ function Header() {
   }
 
   return (
-    <div className='flex justify-between py-8 bg-[#001529] px-10 border-b-[2px] border-white'>
-      <div className='flex items-center space-x-10'>
-        <GithubOutlined className='scale-[3] text-white' />
-        <h2 className='text-[22px] text-white font-semibold'>Admin Panel</h2>
+    <div className='flex justify-between py-8 bg-[#001529] px-10 border-b-[2px] border-[#BC8E5B]'>
+      <div>
+        <Link to={"/"} className='flex items-center space-x-8'>
+          <img className='scale-[3] text-white' src={SiteLogo} alt="Site Logo" width={22} height={22}/>
+          <h2 className='text-[22px] text-white font-semibold'>Admin Panel</h2>
+        </Link> 
       </div>
       <div className=''>
         <button onClick={() => setIsLogoutModalOpen(true)} className="your-button-class">

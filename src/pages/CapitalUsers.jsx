@@ -105,8 +105,8 @@ function CapitalUsers() {
         item.status = item.status ? "Faol" : "Faol emas"
 
         item.action = <div className='flex items-center gap-7'>
-            <MoreOutlined onClick={() => navigate(`${item.id}`)} className='rotate-[90deg] scale-[1.5] hover:scale-[1.7] duration-300 cursor-pointer'/>
-            <EditOutlined onClick={() => navigate(`${item.id}/edit`)} className='scale-[1.5] hover:scale-[1.7] duration-300 cursor-pointer text-blue-800'/>
+            <MoreOutlined /* onClick={() => navigate(`${item.id}`)} */ className='rotate-[90deg] scale-[1.5] hover:scale-[1.7] duration-300 cursor-pointer'/>
+            <EditOutlined /* onClick={() => navigate(`${item.id}/edit`)} */ className='scale-[1.5] hover:scale-[1.7] duration-300 cursor-pointer text-blue-800'/>
             <DeleteOutlined onClick={() => handleDeleteOrganization(item.id)} className='scale-[1.5] hover:scale-[1.7] duration-300 cursor-pointer text-red-700'/>
         </div>
         return item
